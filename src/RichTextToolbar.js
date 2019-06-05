@@ -131,8 +131,9 @@ export default class RichTextToolbar extends Component {
     return (
       <TouchableOpacity
           key={action}
+          activeOpacity={0.6}
           style={[
-            {height: 50, width: 50, justifyContent: 'center'},
+            {height: 50, width: 50, justifyContent: 'center', alignItems: 'center'},
             selected ? this._getButtonSelectedStyle() : this._getButtonUnselectedStyle()
           ]}
           onPress={() => this._onPress(action)}

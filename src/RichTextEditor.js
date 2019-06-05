@@ -214,7 +214,7 @@ export default class RichTextEditor extends Component {
         >
           <View style={styles.modal}>
             <View style={[styles.innerModal, {marginBottom: PlatformIOS ? this.state.keyboardHeight : 0}]}>
-              <Text style={styles.inputTitle}>Title</Text>
+              <Text style={styles.inputTitle}>Título</Text>
               <View style={styles.inputWrapper}>
                 <TextInput
                     style={styles.input}
@@ -262,7 +262,7 @@ export default class RichTextEditor extends Component {
             style={buttonPlatformStyle}
         >
           <Text style={[styles.button, {paddingRight: 10}]}>
-            {this._upperCaseButtonTextIfNeeded('Cancel')}
+            {this._upperCaseButtonTextIfNeeded('Fechar')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -278,7 +278,7 @@ export default class RichTextEditor extends Component {
             style={buttonPlatformStyle}
         >
           <Text style={[styles.button, {opacity: insertUpdateDisabled ? 0.5 : 1}]}>
-            {this._upperCaseButtonTextIfNeeded(this._linkIsNew() ? 'Insert' : 'Update')}
+            {this._upperCaseButtonTextIfNeeded(this._linkIsNew() ? 'Inserir' : 'Atualizar')}
           </Text>
         </TouchableOpacity>
       </View>
@@ -298,7 +298,7 @@ export default class RichTextEditor extends Component {
     const {bottomSpacing = 0} = this.props
     //in release build, external html files in Android can't be required, so they must be placed in the assets folder and accessed via uri
     const pageSource = PlatformIOS ? require('./editor.html') : { uri: 'file:///android_asset/editor.html' };
-    const rootStyle = PlatformIOS ? { flex: 1 } : { flex: 1, marginBottom: (keyboardHeight + bottomSpacing) }
+    const rootStyle = PlatformIOS ? { flex: 1 } : { flex: 1, marginBottom: 0 }
     return (
       <View style={rootStyle}>
         <WebViewBridge
