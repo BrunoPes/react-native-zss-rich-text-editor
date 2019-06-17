@@ -464,11 +464,15 @@ export default class RichTextEditor extends Component {
   }
 
   insertLink(url, title) {
-    this._sendAction(actions.insertLink, {url, title});
+    const urlWithoutHttp = (url || '').replace('https://', '').replace('http://', '');
+    const urlWithHttp = `http://${urlWithoutHttp}`;
+    this._sendAction(actions.insertLink, {url: urlWithHttp, title});
   }
 
   updateLink(url, title) {
-    this._sendAction(actions.updateLink, {url, title});
+    const urlWithoutHttp = (url || '').replace('https://', '').replace('http://', '');
+    const urlWithHttp = `http://${urlWithoutHttp}`;
+    this._sendAction(actions.updateLink, {url: urlWithHttp, title});
   }
 
   insertImage(attributes) {
