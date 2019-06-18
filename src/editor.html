@@ -1085,7 +1085,7 @@
 				}
 
 				if (newPos) {
-					window.scrollTo(0, Math.abs(newPos));
+					// window.scrollTo(0, Math.abs(newPos));
 				}
 			}
 
@@ -1742,6 +1742,7 @@
 			}
 
 			#zss_editor_title {
+				display: none;
 				padding-left: 10px;
 				padding-right: 10px;
 			}
@@ -1763,6 +1764,7 @@
 			}
 
 			#separatorContainer {
+				display: none;
 				-webkit-user-select: none;
 				padding-left: 10px;
 				padding-right: 10px;
@@ -1780,6 +1782,6 @@
 		<div id="zss_editor_title" class="zss_editor_title" contenteditable="true" placeholder="" disableLineBreaks="true"></div>
 		<div id="separatorContainer"><hr></div>
 		<div id="zss_editor_content" class="zss_editor_content" contenteditable="true" placeholder=""></div>
-		<div id="zss_editor_footer"></div>
+		<!-- <div id="zss_editor_footer"></div> -->
 	</body>
 </html>
