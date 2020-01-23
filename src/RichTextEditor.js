@@ -303,7 +303,7 @@ export default class RichTextEditor extends Component {
       <View style={rootStyle}>
         <WebViewBridge
           hideKeyboardAccessoryView={true}
-          keyboardDisplayRequiresUserAction={false}
+          // keyboardDisplayRequiresUserAction={false}
           {...this.props}
           useWebKit={true}
           ref={(r) => {this.webviewBridge = r}}
