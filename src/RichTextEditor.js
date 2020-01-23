@@ -305,6 +305,7 @@ export default class RichTextEditor extends Component {
           hideKeyboardAccessoryView={true}
           keyboardDisplayRequiresUserAction={false}
           {...this.props}
+          useWebKit={true}
           ref={(r) => {this.webviewBridge = r}}
           onBridgeMessage={(message) => this.onBridgeMessage(message)}
           injectedJavaScript={injectScript}
